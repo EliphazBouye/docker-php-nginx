@@ -8,3 +8,11 @@ services:
       - ./config/nginx.conf:/etc/nginx/conf.d/nginx.conf
       - ./web:/web
   
+  php:
+    build:
+      context: .
+      dockerfile: PHP.Dockerfile
+    volumes:
+      - ./web:/web
+
+  
